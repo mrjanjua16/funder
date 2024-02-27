@@ -1,43 +1,30 @@
-import Header from './header';
-import Themes from './themes';
-import styled, {ThemeProvider, createGlobalStyle} from 'styled-components';
-import {useState, createContext} from 'react';
+"use client";
+import React from 'react'
+import NavigationBar from './navigationBar';
+import LayoutStyles from './layout.module.css';
 
-export const useClient = () => null;
+interface LayoutProps 
+{
+  title?: string;
+}
 
 export default function RootLayout({
   children,
+  title
 }: Readonly<{
   children: React.ReactNode;
-}>){
-  const [theme, setTheme] = useState('light');
-  
-  const GlobalStyle = createGlobalStyle`
-    body {
-      margin: 0;
-      padding: 0;
-    }
-  `;
-
-  const LayoutWrapper = styled.div`
-  min--height: 100vh;
-  background-color: ${(props) => props.theme.bgColor};
-  background-image: ${(props) => props.theme.bgImage};
-  color: ${(props) => props.color};
-  `;
-
-  const changeTheme = ()=>
-  {
-    setTheme(theme == "light" ? "dark": "light");
-  }
+}> & LayoutProps){
   return (
     <>
-    <ThemeProvider theme={Themes[theme]}>
-    <LayoutWrapper onClick={changeTheme}>
-    <GlobalStyle />
-    <Header />
-    {children}
-    </LayoutWrapper>
-    </ThemeProvider></>
+    <div className={LayoutStyles.container}>
+      <div className={LayoutStyles.header}>
+      <h1>{title}</h1>
+      <NavigationBar />
+      </div>
+      <div className={LayoutStyles.content}>
+        {children}
+      </div>
+    </div>
+    </>
   );
 }

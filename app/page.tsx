@@ -1,11 +1,15 @@
+import React from 'react';
 import Layout from './layout'
 
 export default function Home()
 {
   return (
     <div>
-      <Layout children={undefined}></Layout>
-      <div>Home Page</div>
+      <Layout title="Home Page">
+      <div>
+        <p>This is the home page content</p>
+      </div>
+      </Layout>
     </div>
   )
 }
