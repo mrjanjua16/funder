@@ -1,7 +1,7 @@
 "use client";
 import React from 'react'
-import NavigationBar from './navigationBar';
 import LayoutStyles from './layout.module.css';
+import styles from './NavigationBar.module.css';
 
 interface LayoutProps 
 {
@@ -18,7 +18,14 @@ export default function RootLayout({
 <>
       <div className={LayoutStyles.header}>
       <h1>{title}</h1>
-        <NavigationBar />
+        <div className={styles.navbar}>
+        <button>Dashboard</button>
+        <button>Campaigns</button>
+        <button>Create Campaign</button>
+        </div>
+        <div className={styles.navbar}>
+          <button>Connect Wallet</button>
+        </div>
       </div>
       
       <div className={LayoutStyles.content}>
