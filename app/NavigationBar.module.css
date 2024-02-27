@@ -2,8 +2,6 @@
     background-color: #ffffff;
     color: #000000;
     padding: 10px;
-    display: flex;
-    justify-content: flex-end;
     gap: 10px;
 }
 
@@ -12,7 +10,9 @@
     border: none;
     background-color: #5edefe;
     color: white;
-    cursor: pointer;;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
 }
 
 .navbar button:hover {

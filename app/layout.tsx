@@ -16,21 +16,28 @@ export default function RootLayout({
 }> & LayoutProps){
   return (
 <>
-      <div className={LayoutStyles.header}>
-      <h1>{title}</h1>
-        <div className={styles.navbar}>
-        <button>Dashboard</button>
-        <button>Campaigns</button>
-        <button>Create Campaign</button>
-        </div>
-        <div className={styles.navbar}>
-          <button>Connect Wallet</button>
-        </div>
-      </div>
-      
-      <div className={LayoutStyles.content}>
-        {children}
-      </div>
+  <div className={LayoutStyles.header}>
+  <h1>{title}</h1>
+    <div className={styles.navbar}>
+    <button>Dashboard</button>
+    <button>Campaigns</button>
+    <button>Create Campaign</button>
+    <button onClick={connectWallet}>Connect Wallet</button>
+    </div>
+  </div>
+  <div className={LayoutStyles.content}>
+    {children}
+  </div>
 </>
   );
+}
+
+const connectWallet = async () => {
+  await window.ethereum.request({ method: "eth_requestAccounts"});
+}
+
+const networks = {
+  polygon: {
+    chainId: '0x${Number(137).toString(16)}',
+  }
 }
