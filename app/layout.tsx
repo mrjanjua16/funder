@@ -15,16 +15,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }> & LayoutProps){
   return (
-    <>
-    <div className={LayoutStyles.container}>
+<>
       <div className={LayoutStyles.header}>
       <h1>{title}</h1>
-      <NavigationBar />
+        <NavigationBar />
       </div>
+      
       <div className={LayoutStyles.content}>
         {children}
       </div>
-    </div>
-    </>
+</>
   );
 }
