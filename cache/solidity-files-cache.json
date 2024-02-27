@@ -1,0 +1,110 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "E:\\COURSES\\blockchain full course\\Fundraising Project Next\\funder\\contracts\\campaign.sol": {
+      "lastModificationDate": 1707290565396,
+      "contentHash": "18b2bdac3301bf23e7fc6cfda335accf",
+      "sourceName": "contracts/campaign.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "campaign"
+      ]
+    },
+    "E:\\COURSES\\blockchain full course\\Fundraising Project Next\\funder\\contracts\\donate.sol": {
+      "lastModificationDate": 1707290574170,
+      "contentHash": "7fb2d4944387d2c8e6425f45bb311802",
+      "sourceName": "contracts/donate.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./campaign.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "donate"
+      ]
+    },
+    "E:\\COURSES\\blockchain full course\\Fundraising Project Next\\funder\\contracts\\IdentityContract.sol": {
+      "lastModificationDate": 1707812958019,
+      "contentHash": "99446011592f6504da9b41c9d682bf4b",
+      "sourceName": "contracts/IdentityContract.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": []
+    }
+  }
+}
