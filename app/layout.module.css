@@ -3,7 +3,7 @@
 }
 
 .header {
-    background-color: aquamarine;
+    background-color: rgb(255, 255, 255);
     padding: 10px;
     display: flex;
     justify-content: space--between;
